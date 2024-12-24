@@ -1,234 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <!-- Display for the calculator -->
-    <TextView
-        android:id="@+id/tvDisplay"
-        android:layout_width="0dp"
+    <!-- Input for initial amount -->
+    <Spinner
+        android:id="@+id/dropdownMenu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:gravity="end"
-        android:padding="16dp"
-        android:text="@string/_defaultDisplay"
-        android:textColor="@android:color/white"
-        android:textSize="48sp"
+        android:minHeight="48dp"
+        android:spinnerMode="dropdown"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/initialAmountInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/enter_income_amount"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Button to add money -->
+    <Button
+        android:id="@+id/addMoneyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_income"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/green"/>
+
+    <!-- Display for remaining balance -->
+    <TextView
+        android:id="@+id/remainingAmountView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/remaining_balance_0_00"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="16dp" />
 
-    <!-- Buttons grid -->
-    <GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="359dp"
-        android:layout_height="445dp"
-        android:layout_gravity="center"
-        android:layout_margin="16dp"
-        android:background="@android:color/black"
-        android:columnCount="4"
-        android:rowCount="5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDisplay">
+    <!-- ListView for money entries -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/money_entries"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
 
-        <!-- Buttons -->
-        <Button
-            android:id="@+id/btnClear"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/holo_red_light"
-            android:gravity="center"
-            android:text="@string/c"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+    <!-- Section for adding an expense -->
+    <ListView
+        android:id="@+id/moneyListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:dividerHeight="8dp"
+        android:padding="8dp" />
 
-        <Button
-            android:id="@+id/btnDivide"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/divide"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+<!-- Inputs for expense name and amount -->
+    <EditText
+        android:id="@+id/expenseNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/enter_expense_name"
+        android:layout_marginBottom="8dp"
+        android:inputType="text"
+        android:minHeight="48dp" />
 
-        <Button
-            android:id="@+id/btnMultiply"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/multiply"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+    <EditText
+        android:id="@+id/expenseAmountInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/enter_expense_amount"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:layout_marginBottom="8dp" />
 
-        <Button
-            android:id="@+id/btnDelete"
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/del"
-            android:textColor="@android:color/white"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+<!-- Button to add expense -->
+    <Button
+        android:id="@+id/addExpenseButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_expense"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/red"/>
 
-        <Button
-            android:id="@+id/btnEqual"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/holo_orange_light"
-            android:text="@string/equal"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+    <!-- Display for total expenses -->
+    <TextView
+        android:id="@+id/totalExpenseView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/total_spent_0_00"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp" />
 
-        <Button
-            android:id="@+id/btnAdd"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/plus"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
+    <!-- ListView for expenses -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/expenses"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
 
-        <Button
-            android:id="@+id/btnSubtract"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/minus"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <!-- Number buttons -->
-        <Button
-            android:id="@+id/btn0"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/_0"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/_1"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/_2"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/_3"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn4"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/_4"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn5"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/_5"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn6"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/_6"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn7"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/_7"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn8"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/_8"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/btn9"
-            android:layout_width="75dp"
-            android:layout_height="80dp"
-            android:layout_margin="4dp"
-            android:backgroundTint="@android:color/darker_gray"
-            android:text="@string/_9"
-            android:textColor="@android:color/white"
-            android:textSize="24sp"
-            android:textStyle="bold" />
-
-    </GridLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ListView
+        android:id="@+id/expenseListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:dividerHeight="8dp"
+        android:padding="8dp" />
+</LinearLayout>
