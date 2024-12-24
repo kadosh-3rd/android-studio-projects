@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity">
+
+    <!-- Display for the calculator -->
+    <TextView
+        android:id="@+id/tvDisplay"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="end"
+        android:padding="16dp"
+        android:text="@string/_defaultDisplay"
+        android:textColor="@android:color/white"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Buttons grid -->
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="359dp"
+        android:layout_height="445dp"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:background="@android:color/black"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDisplay">
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:gravity="center"
+            android:text="@string/c"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/divide"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnMultiply"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/multiply"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/del"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnEqual"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/holo_orange_light"
+            android:text="@string/equal"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/plus"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnSubtract"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/minus"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Number buttons -->
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/_0"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/_1"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/_2"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/_3"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/_4"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/_5"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/_6"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/_7"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/_8"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_margin="4dp"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="@string/_9"
+            android:textColor="@android:color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
