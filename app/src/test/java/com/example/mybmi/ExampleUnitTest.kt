@@ -1,4 +1,4 @@
-package com.example.flexbill
+package com.example.mybmi
 
 import org.junit.Test
 

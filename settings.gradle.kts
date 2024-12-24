@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Flex Bill"
+rootProject.name = "My BMI"
 include(":app")

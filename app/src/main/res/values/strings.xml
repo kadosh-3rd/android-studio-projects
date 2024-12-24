@@ -1,9 +1,7 @@
 <resources>
-    <string name="app_name">Flex Bill</string>
-    <string name="flex_bill">Flex Bill</string>
-    <string name="enter_bill_amount">Enter Bill Amount</string>
-    <string name="tip_percentage">Tip Percentage</string>
-    <string name="_0">0%</string>
-    <string name="total_amount">Total Amount</string>
-    <string name="pay">Pay</string>
+    <string name="app_name">My BMI</string>
+    <string name="app_title">BMI Health Analyzer</string>
+    <string name="weight_input_text">Weight (kg)</string>
+    <string name="height_input_text">Height (m)</string>
+    <string name="calculate_bmi_btn_text">Calculate BMI</string>
 </resources>
