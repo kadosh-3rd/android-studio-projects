@@ -1,120 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <!-- Input for initial amount -->
-    <Spinner
-        android:id="@+id/dropdownMenu"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="48dp"
-        android:spinnerMode="dropdown"
-        android:layout_marginBottom="8dp"/>
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/flex_bill"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:layout_marginBottom="24dp"
+            android:textColor="#333333"/>
+    </LinearLayout>
 
-    <EditText
-        android:id="@+id/initialAmountInput"
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigation" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:hint="@string/enter_income_amount"
-        android:inputType="numberDecimal"
-        android:minHeight="48dp"
-        android:layout_marginBottom="8dp" />
-
-    <!-- Button to add money -->
-    <Button
-        android:id="@+id/addMoneyButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/add_income"
-        android:layout_marginBottom="16dp"
-        android:textColor="@color/white"
-        android:backgroundTint="@color/green"/>
-
-    <!-- Display for remaining balance -->
-    <TextView
-        android:id="@+id/remainingAmountView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/remaining_balance_0_00"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
-
-    <!-- ListView for money entries -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/money_entries"
-        android:textStyle="bold"
-        android:layout_marginBottom="8dp" />
-
-    <!-- Section for adding an expense -->
-    <ListView
-        android:id="@+id/moneyListView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:dividerHeight="8dp"
-        android:padding="8dp" />
-
-<!-- Inputs for expense name and amount -->
-    <EditText
-        android:id="@+id/expenseNameInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:hint="@string/enter_expense_name"
-        android:layout_marginBottom="8dp"
-        android:inputType="text"
-        android:minHeight="48dp" />
-
-    <EditText
-        android:id="@+id/expenseAmountInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autofillHints=""
-        android:hint="@string/enter_expense_amount"
-        android:inputType="numberDecimal"
-        android:minHeight="48dp"
-        android:layout_marginBottom="8dp" />
-
-<!-- Button to add expense -->
-    <Button
-        android:id="@+id/addExpenseButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_expense"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/red"/>
-
-    <!-- Display for total expenses -->
-    <TextView
-        android:id="@+id/totalExpenseView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/total_spent_0_00"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
-
-    <!-- ListView for expenses -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/expenses"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp" />
-
-    <ListView
-        android:id="@+id/expenseListView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:dividerHeight="8dp"
-        android:padding="8dp" />
-</LinearLayout>
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu" />
+</RelativeLayout>

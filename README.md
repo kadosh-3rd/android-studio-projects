@@ -1,16 +1,16 @@
-# expense-tracker-app
+# flexbill-app
 
-This is an expense tracker app that helps users to keep track of their expenses. It allows users to add their expenses, categorize them, and view their spending over time. The app also provides a summary of the user's expenses, which can be helpful for budgeting and financial planning.
+FlexBill is a simple prototype of a bill management app for people often dining out.
 
 ## Features
 
-- Users can add expenses, categorize them, and view their spending over time.
-- Users can view their expenses in a summary, which can be helpful for budgeting and financial planning.
+- Calculate bills
+- Pay bills
+- View bills
 
 ## Screenshots Demo
 
-![Expense Tracker App Screenshot](media/Screenshot_20241212_154918.png)
-![Expense Tracker App Video Demo](media/Screen_recording_20241212_155208.mp4)
+(void)
 
 ## Requirements
 

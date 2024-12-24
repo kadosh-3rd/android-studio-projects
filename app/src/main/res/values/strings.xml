@@ -1,13 +1,9 @@
 <resources>
-    <string name="app_name">Expenses Tracker</string>
-    <string name="enter_income_name">Enter income name</string>
-    <string name="enter_income_amount">Enter income amount</string>
-    <string name="add_income">Add Income</string>
-    <string name="remaining_balance_0_00">Remaining Balance: $0.00</string>
-    <string name="enter_expense_name">Enter expense name</string>
-    <string name="enter_expense_amount">Enter expense amount</string>
-    <string name="add_expense">Add Expense</string>
-    <string name="total_spent_0_00">Total Spent: $0.00</string>
-    <string name="money_entries">Money Entries:</string>
-    <string name="expenses">Expenses:</string>
+    <string name="app_name">Flex Bill</string>
+    <string name="flex_bill">Flex Bill</string>
+    <string name="enter_bill_amount">Enter Bill Amount</string>
+    <string name="tip_percentage">Tip Percentage</string>
+    <string name="_0">0%</string>
+    <string name="total_amount">Total Amount</string>
+    <string name="pay">Pay</string>
 </resources>
