@@ -7,6 +7,7 @@ A simple entertaining quiz app that helps you test your knowledge. It provides a
 - Multiple choice questions
 - Diverse range of topics
 - Track your progress and view your high scores
+- User-friendly interface
 
 ## Screenshots
 
