@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.mybmi"
+    namespace = "com.example.quizdojo"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.mybmi"
+        applicationId = "com.example.quizdojo"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

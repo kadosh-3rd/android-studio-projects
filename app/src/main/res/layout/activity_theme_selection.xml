@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="54sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="32dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/themeSelectionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_a_topic_and_let_s_dive_in"
+        android:textSize="20sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="32dp"
+        android:textStyle="italic"/>
+
+    <Button
+        android:id="@+id/mathematicsButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mathematics"
+        android:textSize="18sp"
+        android:backgroundTint="@color/dodger_blue"/>
+
+    <Button
+        android:id="@+id/computerScienceButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/computer_science"
+        android:textSize="18sp"
+        android:backgroundTint="@color/dodger_blue"/>
+
+    <Button
+        android:id="@+id/geographyButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/geography"
+        android:textSize="18sp"
+        android:backgroundTint="@color/dodger_blue"/>
+
+    <Button
+        android:id="@+id/lawButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/law"
+        android:textSize="18sp"
+        android:backgroundTint="@color/dodger_blue"/>
+</LinearLayout>

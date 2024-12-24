@@ -1,7 +1,19 @@
 <resources>
-    <string name="app_name">My BMI</string>
-    <string name="app_title">BMI Health Analyzer</string>
-    <string name="weight_input_text">Weight (kg)</string>
-    <string name="height_input_text">Height (m)</string>
-    <string name="calculate_bmi_btn_text">Calculate BMI</string>
+    <string name="app_name">Quiz Dojo</string>
+    <string name="your_score_0">Your Score: 0</string>
+    <string name="choose_another_topic">Choose another topic</string>
+    <string name="exit_game">Exit Game</string>
+    <string name="choose_a_topic_and_let_s_dive_in">Choose a topic and let\'s dive in 😎</string>
+    <string name="mathematics">Mathematics 📐</string>
+    <string name="computer_science">Computer Science 💻</string>
+    <string name="geography">Geography 🌍</string>
+    <string name="law">Law 👩🏽‍⚖</string>
+    <string name="time_30_sec">Time: 30 sec</string>
+    <string name="score_0">Score: 0</string>
+    <string name="back">Back</string>
+    <string name="question">Question</string>
+    <string name="option_1">Option 1</string>
+    <string name="option_2">Option 2</string>
+    <string name="option_3">Option 3</string>
+    <string name="option_4">Option 4</string>
 </resources>

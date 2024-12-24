@@ -1,4 +1,4 @@
-package com.example.mybmi
+package com.example.quizdojo
 
 import org.junit.Test
 

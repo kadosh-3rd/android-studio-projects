@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "My BMI"
+rootProject.name = "Quiz Dojo"
 include(":app")
