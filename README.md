@@ -1,16 +1,17 @@
-# Quiz Dojo
+# My BMI
 
-A simple entertaining quiz app that helps you test your knowledge. It provides a variety of questions and answers, and allows you to track your progress and view your high scores.
+My BMI is a simple Android app that calculates BMI (Body Mass Index) based on weight and height. It is designed to be used by people who want to monitor their health and fitness.
 
 ## Features
 
-- Multiple choice questions
-- Diverse range of topics
-- Track your progress and view your high scores
+- Calculates BMI based on weight and height.
+- Displays BMI in a user-friendly format.
+- Provides a clear and concise user interface.
+- Offers advices and tips for maintaining a healthy lifestyle.
 
 ## Screenshots
 
-![Quiz Dojo Screenshot](media/Screenshot_20241213_192413.png)
+![My BMI Screenshot](media/Screenshot_2024-12-13_204733.png)
 
 ## Requirements
 
